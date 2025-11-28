@@ -1,0 +1,371 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    
+}
+a{
+    text-decoration: none;
+    color: bisque;
+}
+:root{
+   --primaryColor: #FFB6C1;     /* Soft Pink */
+    --secondaryColor: #FF4D6D;   /* Sweet Red */
+    --accentColor: #FFC6D9;      /* Baby Pink */
+    --boxColor: #FFF6F8;         /* Light Cream */
+    --textColor: #4A2C2A;        /* Soft Dark Chocolate */
+}
+
+nav{
+   display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh; /* navbar height */
+    border-bottom: 2px solid var(--accentColor);
+    background-color: rgba(255, 77, 109, 0.85); /* semi-transparent pink */
+    padding: 0 2rem;
+    z-index: 10;
+    
+}
+
+ nav ul{
+    width: 25%;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    font-size: 2rem;
+
+
+}
+nav ul li{
+  color: #FFF6F8;
+   
+}
+
+nav ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--highlightColor);
+}
+
+nav h1{
+    font-size: 30px;
+    color: #FFF6F8;
+    padding-left: 2rem;
+}
+/*body ho yo */
+
+.hero{
+background: linear-gradient(135deg, #FF4D6D, #FFB6C1);
+    height: 92vh;
+    display: flex;
+    
+}
+.hero .left{
+   
+    height: 100%;
+    font-size: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--textColor);
+    line-height: 2rem;
+
+}
+.hero .right{
+    height: 100%;
+    width: 50%;
+    display: flex;
+
+
+}
+
+/* Hero right container */
+.hero .right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center;     /* centers vertically */
+}
+
+/* Hero right image larger + hover + floating animation */
+.hero .right img {
+    height: 90%;       /* can adjust size */
+    max-width: 100%;   /* responsive */
+    border-radius: 50% 20% / 10% 40%;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    animation: floatImg 6s ease-in-out infinite;
+    object-fit: cover;
+}
+
+/* Hover effect */
+.hero .right img:hover {
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Floating animation */
+@keyframes floatImg {
+    0% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(1deg); }
+    50% { transform: translateY(0) rotate(0deg); }
+    75% { transform: translateY(10px) rotate(-1deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+
+
+.left p{
+    color: var(--highlightColor);
+    font-size: 20px;
+}
+.left h1{
+    font-size: 3rem;
+}
+.socialMedia{
+    
+    width: 10rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.socialMedia img{
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid var(--highlightColor);
+}
+
+.socialMediaNames{
+    
+    width: 10rem;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.socialMediaNames p{
+    font-size: 0.7rem;
+
+}
+.hero .right img{
+    height: 70%;
+    border-radius: 50% 20% / 10% 40%;
+}
+
+.services{
+     padding: 2rem 1rem;
+    display: grid;
+    background-color: var(--boxColor);
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem; /* gap between cards */
+    font-size: 1.2rem;
+}
+
+.services div{
+    height: 16rem;
+    padding: 1rem;
+    transition: 0.3s;
+  border: 2px solid var(--secondaryColor); 
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primaryColor);  /* Soft Pink */
+    align-items: center;
+    justify-content: center;
+    line-height:2rem ;
+    border-radius: 25% 10%;
+
+
+}
+
+.services div img{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+}
+.services div h3{
+     color: var(--highlightColor);
+}
+.services div p{
+    font-size: 0.8rem;
+    color: var(--textColor);
+}
+ .outOfServices{
+   color: var(--textColor);
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 3rem;
+    text-decoration: underline;
+}
+
+.services div:hover{
+    cursor: pointer;
+    background-color: var(--accentColor);
+    transform: scale(1.03);
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+
+/* Smooth fade + slide on load */
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth scale on hover */
+@keyframes smoothScale {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+/* Typing effect for hero text */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Card appearance */
+.services div {
+    animation: fadeSlide 0.7s ease forwards;
+}
+
+/* Cards hover animation */
+.services div:hover {
+    animation: smoothScale 0.3s ease forwards;
+}
+
+/* Navbar slide animation */
+nav {
+    animation: fadeSlide 0.8s ease-out;
+}
+
+/* Hero left text fade */
+.hero .left h1,
+.hero .left p {
+    animation: fadeSlide 1s ease-out;
+}
+
+/* Typing animation on your hero heading */
+.hero .left h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--accentColor);
+    animation: 
+        typing 3s steps(20) 0.5s forwards,
+        blink 0.7s infinite;
+}
+
+/* Social media icons hover animation */
+.socialMedia img {
+    transition: 0.3s ease;
+}
+.socialMedia img:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.outOfServices, .contact h1 {
+    margin: 5rem 0 2rem 0; /* top margin creates gap from previous section */
+    text-align: center;
+    font-size: 3rem;
+    text-decoration: underline;
+}
+
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px 20px;
+    background-color: var(--boxColor);
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 250px;
+    font-size: 1rem;
+    color: var(--textColor);
+    line-height: 2rem;
+    border: 2px solid var(--secondaryColor);
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--primaryColor);
+    text-align: left;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    border: 2px solid var(--secondaryColor);
+    border-radius: 20px;
+    padding: 20px;
+    background-color: var(--primaryColor);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid var(--secondaryColor);
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: var(--secondaryColor);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--accentColor);
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: var(--secondaryColor); /* matches your navbar */
+    color: #FFF6F8;                         /* light text for contrast */
+    text-align: center;                      /* center the text */
+    padding: 15px 0;                         /* spacing top & bottom */
+    font-size: 0.9rem;                       /* slightly smaller font */
+    border-top: 2px solid var(--accentColor);
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+
+
+

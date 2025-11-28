@@ -1,0 +1,56 @@
+/* Common box style */
+.box {
+    width: 100px;
+    height: 50px;
+    background: lightblue;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+/* 1. Static (default) */
+.static {
+    position: static;
+    background: lightgray;
+}
+
+/* 2. Relative */
+.relative {
+    position: relative;
+    left: 20px;  /* move right */
+    top: 10px;   /* move down */
+    background: lightgreen;
+}
+
+/* 3. Absolute */
+.parent {
+    width: 250px;
+    height: 120px;
+    border: 2px solid black;
+    position: relative;   /* important */
+}
+
+.absolute {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: orange;
+}
+
+/* 4. Fixed */
+.fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: red;
+    color: white;
+}
+
+/* 5. Sticky */
+.sticky {
+    position: sticky;
+    top: 0;
+    background: purple;
+    color: white;
+}

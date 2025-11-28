@@ -1,0 +1,12 @@
+body{
+    background-image:url('./gces.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px;
+    text-align: center;
+    justify-content: flex-end;
+    color: black;
+    
+    
+
+}

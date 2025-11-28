@@ -1,0 +1,43 @@
+
+.btn:hover {
+  background-color: #ff6666;
+  color: white;
+}
+
+.btn:visited {
+  color: purple;
+}
+
+input:focus {
+  border: 2px solid blue;
+}
+
+.list li:first-child {
+  font-weight: bold;
+  color: green;
+}
+
+.list li:nth-child(2) {
+  color: orange;
+}
+
+
+.title::before {
+  content: "* ";
+  color: gold;
+}
+
+.title::after {
+  content: " *";
+  color: gold;
+}
+
+.info::first-letter {
+  font-size: 30px;
+  color: red;
+}
+
+::selection {
+  background-color: yellow;
+  color: black;
+}
